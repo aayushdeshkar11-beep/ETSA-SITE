@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETSA — Electronics &amp; Telecommunication Students' Association</title>
+<meta name="description" content="ETSA — Electronics & Telecommunication Students' Association. Events, workshops, register now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero{padding:110px 0 80px; text-align:center; position:relative; overflow:hidden;}
+  .hero::before{
+    content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+    width:900px; height:500px; border-radius:50%;
+    background:radial-gradient(ellipse, var(--signal-tint) 0%, transparent 70%); z-index:0; pointer-events:none;
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace;
+    font-size:0.78rem; color:var(--signal-deep); background:var(--signal-tint);
+    padding:7px 14px; border-radius:20px; margin-bottom:32px; font-weight:500;
+  }
+  .eyebrow::before{content:''; width:6px;height:6px;border-radius:50%;background:var(--signal); animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
+  .hero h1{
+    font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-0.03em;
+    font-size:clamp(2.6rem, 6vw, 4.6rem); line-height:1.05; max-width:840px; margin:0 auto;
+  }
+  .hero h1 .accent{color:var(--signal-deep);}
+  .hero p.sub{max-width:560px; margin:26px auto 0; color:var(--ink-dim); font-size:1.15rem;}
+  .hero-actions{display:flex; gap:14px; justify-content:center; margin-top:40px; flex-wrap:wrap;}
+  .preview-row{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:40px; flex-wrap:wrap; gap:16px;}
+</style>
+</head>
+<body>
+<svg class="traces" viewBox="0 0 1080 1400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 120 H260 V240 H620 V90 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <path d="M0 480 H180 V620 H540 V520 H900 V700 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <path d="M0 900 H320 V1020 H700 V880 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <circle cx="260" cy="120" r="3.5" fill="#2a9d6e"/>
+  <circle cx="620" cy="240" r="3.5" fill="#2a9d6e"/>
+  <circle cx="180" cy="480" r="3.5" fill="#2a9d6e"/>
+  <circle cx="540" cy="620" r="3.5" fill="#2a9d6e"/>
+  <circle cx="900" cy="520" r="3.5" fill="#2a9d6e"/>
+  <circle cx="320" cy="900" r="3.5" fill="#2a9d6e"/>
+  <circle cx="700" cy="1020" r="3.5" fill="#2a9d6e"/>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 34 34" fill="none">
+        <rect x="1" y="1" width="32" height="32" rx="8" fill="#0b0e14"/>
+        <path d="M17 9 V14.5 M17 19.5 V25 M9 17 H14.5 M19.5 17 H25" stroke="#A855F7" stroke-width="1.8"/>
+        <circle cx="17" cy="17" r="3.2" fill="#A855F7"/>
+      </svg>
+      <span>ETSA</span>
+    </div>
+    <input type="checkbox" id="nav-check" class="nav-check">
+    <label for="nav-check" class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="events.html">Events</a>
+      <a href="horizon.html">Horizon</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html" class="nav-cta">Register</a>
+    </div>
+    <label for="nav-check" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow"> ETSA · GCOEN · 2026</span>
+    <h1>The department community for<br><span class="accent">Electronics &amp; Telecommunication</span></h1>
+    <p class="sub">ETSA is the student body of Electronic and Telecommunication engineering branch of the Government college of engineering, Nagpur. ETSA is responsible for organising both academic and extra-curricular activities such as technical seminars, hands-on session industrial visits, quizzes and competitions throughout the year.</p>
+    <div class="hero-actions">
+      <a href="horizon.html" class="btn btn-primary">Horizon 2026 ↗</a>
+      <a href="about.html" class="btn btn-ghost">Meet The Team</a>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="stat-item"><div class="num">50</div><div class="lbl">Students in the community</div></div>
+  <div class="stat-item"><div class="num">23</div><div class="lbl">Events organised</div></div>
+  <div class="stat-item"><div class="num">3</div><div class="lbl">Faculty coordinators</div></div>
+  <div class="stat-item"><div class="num">3</div><div class="lbl">Years running</div></div>
+</div>
+
+<section id="bento-dashboard">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="section-tag mono">LIVE DASHBOARD</span>
+      <h2 class="section-title">Horizon 2026 at a glance</h2>
+      <p class="lead">Real-time numbers, milestones, and momentum — all in one place.</p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Top Left: Big Registration Number -->
+      <div class="bento-tile bento-tile-large" id="tile-registrations">
+        <div class="tile-glow"></div>
+        <div class="tile-content">
+          <span class="tile-label mono">Registrations on hold</span>
+          <div class="tile-number" data-target="20"></div>
+          <div class="tile-sparkline">
+            <svg viewBox="0 0 120 30" preserveAspectRatio="none">
+              <polyline points="0,28 10,22 20,25 30,18 40,20 50,14 60,16 70,10 80,12 90,6 100,8 110,2 120,4" 
+                fill="none" stroke="var(--signal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="filter: drop-shadow(0 0 6px rgba(139,92,246,0.6));"/>
+            </svg>
+          </div>
+          <p class="tile-caption">+18% from last week</p>
+        </div>
+      </div>
+
+      <!-- Top Right: Mini Bar Chart -->
+      <div class="bento-tile bento-tile-chart" id="tile-chart">
+        <div class="tile-glow"></div>
+        <div class="tile-content">
+          <span class="tile-label mono">Past Event Attendance</span>
+          <div class="mini-bar-chart">
+            <div class="bar-group">
+              <div class="bar-track"><div class="bar-fill" data-height="45%"></div></div>
+              <span class="bar-name">Ideathon</span>
+              <span class="bar-val">80</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-track"><div class="bar-fill" data-height="55%"></div></div>
+              <span class="bar-name">Futsal</span>
+              <span class="bar-val">90</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-track"><div class="bar-fill" data-height="35%"></div></div>
+              <span class="bar-name">BotMania</span>
+              <span class="bar-val">60</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar-track"><div class="bar-fill" data-height="70%"></div></div>
+              <span class="bar-name">TalkTheTalk</span>
+              <span class="bar-val">120</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Progress Ring -->
+      <div class="bento-tile bento-tile-wide" id="tile-progress">
+        <div class="tile-glow"></div>
+        <div class="tile-content progress-layout">
+          <div class="progress-ring-wrap">
+            <svg class="progress-ring" viewBox="0 0 140 140">
+              <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8b5cf6"/>
+                  <stop offset="100%" stop-color="#c4b5fd"/>
+                </linearGradient>
+                <filter id="ringGlow">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <circle class="progress-track" cx="70" cy="70" r="58"/>
+              <circle class="progress-fill" cx="70" cy="70" r="58" stroke="url(#ringGrad)" 
+                stroke-dasharray="364.4" stroke-dashoffset="364.4" filter="url(#ringGlow)"/>
+            </svg>
+            <div class="progress-text">
+              <span class="progress-percent" data-target="70">0</span><span class="progress-sym">%</span>
+            </div>
+          </div>
+          <div class="progress-info">
+            <span class="tile-label mono">Goal Reached</span>
+            <p class="progress-desc">247 of 360 registration target for Horizon 2026. Keep the momentum going.</p>
+            <div class="progress-meta">
+              <span class="meta-pill"><strong>360</strong> Target</span>
+              <span class="meta-pill"><strong>113</strong> Remaining</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: 3 Small Tiles -->
+      <div class="bento-tile bento-tile-small" id="tile-teams">
+        <div class="tile-glow"></div>
+        <div class="tile-content">
+          <div class="small-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span class="tile-label mono">Teams Formed</span>
+          <div class="tile-number small" data-target="42">0</div>
+          <p class="tile-caption">Across all years</p>
+        </div>
+      </div>
+
+      <div class="bento-tile bento-tile-small" id="tile-days">
+        <div class="tile-glow"></div>
+        <div class="tile-content">
+          <div class="small-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <span class="tile-label mono">Days Left</span>
+          <div class="tile-number small" data-target="12">0</div>
+          <p class="tile-caption">Until Horizon 2026</p>
+        </div>
+      </div>
+
+      <div class="bento-tile bento-tile-small" id="tile-prizes">
+        <div class="tile-glow"></div>
+        <div class="tile-content">
+          <div class="small-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+          </div>
+          <span class="tile-label mono">Prize Pool</span>
+          <div class="tile-number small prize-text" data-target="500" data-prefix="₹" data-suffix="K">₹0K</div>
+          <p class="tile-caption">Worth of rewards</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  // Animate numbers counting up
+  function animateNumber(el, duration){
+    const target = parseInt(el.dataset.target, 10);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const start = performance.now();
+    function tick(now){
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 4); // easeOutQuart
+      const current = Math.round(eased * target);
+      el.textContent = prefix + current + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Intersection Observer to trigger animations when scrolled into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const tile = entry.target;
+        tile.classList.add('tile-visible');
+
+        // Animate numbers
+        tile.querySelectorAll('.tile-number[data-target]').forEach(el => {
+          if(!el.classList.contains('animated')){
+            el.classList.add('animated');
+            animateNumber(el, 1800);
+          }
+        });
+
+        // Animate bar chart
+        tile.querySelectorAll('.bar-fill').forEach(bar => {
+          bar.style.height = bar.dataset.height;
+        });
+
+        // Animate progress ring
+        const ring = tile.querySelector('.progress-fill');
+        if(ring && !ring.classList.contains('animated')){
+          ring.classList.add('animated');
+          // 68% of 364.4 circumference = ~116.6 offset
+          const circumference = 2 * Math.PI * 58; // ~364.4
+          const offset = circumference - (0.68 * circumference);
+          ring.style.strokeDashoffset = offset;
+
+          // Animate percentage text
+          const pctEl = tile.querySelector('.progress-percent');
+          if(pctEl && !pctEl.classList.contains('animated')){
+            pctEl.classList.add('animated');
+            animateNumber(pctEl, 2000);
+          }
+        }
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.bento-tile').forEach(tile => observer.observe(tile));
+})();
+</script>
+
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="section-tag mono">WHAT WE DO</span>
+      <h2 class="section-title">A platform to build, present, and grow</h2>
+      <p class="lead">Everything ETSA runs, in three parts.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Technical Events</h3>
+        <p>Hackathons, workshops, and paper presentations that turn classroom concepts into real projects.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Peer Community</h3>
+        <p>A space where first-years to final-years learn from each other, not just from lectures.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+        <h3>Industry Exposure</h3>
+        <p>Sessions and mentorship connecting the department to real-world electronics &amp; telecom practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="preview-row">
+      <div>
+        <span class="section-tag mono">FROM THE ARCHIVE</span>
+        <h2 class="section-title" style="margin-bottom:0;">A look at past events</h2>
+      </div>
+      <a href="events.html" class="btn btn-ghost">View All Events</a>
+    </div>
+    <div class="event-grid">
+      <div class="event-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#14b87f,#0e9367);">IDEATHON</div>
+        <div class="body">
+          <span class="tag mono">TECH SYMPOSIUM</span>
+          <h3>Ideathon</h3>
+          <p>A department-wide symposium featuring student paper presentations and expert talks.</p>
+          <div class="meta"><span>March 2025</span><span>·</span><span>180 attendees</span></div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#ff8a3d,#e5671c);">IoT</div>
+        <div class="body">
+          <span class="tag mono">WORKSHOP</span>
+          <h3>IoT Bootcamp</h3>
+          <p>A hands-on two-day workshop building real IoT projects from sensors to the cloud.</p>
+          <div class="meta"><span>Nov 2024</span><span>·</span><span>90 attendees</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="section-tag mono">SPONSORS</span>
+      <h2 class="section-title">Powered by our partners</h2>
+      <p class="lead">Horizon 2025 is made possible by organizations that invest in student innovation. <a href="index.html#sponsors" style="color:var(--signal-deep);">See all ETSA sponsors →</a></p>
+    </div>
+    <div class="sponsor-grid">
+      <div class="sponsor-tier">
+        <h3 class="tier-label mono">Title Sponsor</h3>
+        <div class="sponsor-card title">
+          <div class="sponsor-logo">NX</div>
+          <h4>NexGen Semiconductor</h4>
+          <p>India's fastest-growing chip design house. Title sponsor for Horizon 2025.</p>
+          <a class="link" href="#" target="_blank" rel="noopener">Visit website →</a>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <h3 class="tier-label mono">Gold Sponsors</h3>
+        <div class="sponsor-row">
+          <div class="sponsor-card">
+            <div class="sponsor-logo">VF</div>
+            <h4>VoltFlux Power</h4>
+            <p>Power electronics &amp; renewable energy solutions for embedded systems.</p>
+            <a class="link" href="#" target="_blank" rel="noopener">Visit website →</a>
+          </div>
+          <div class="sponsor-card">
+            <div class="sponsor-logo">CW</div>
+            <h4>CircuitWave Labs</h4>
+            <p>High-precision PCB manufacturing and rapid prototyping services.</p>
+            <a class="link" href="#" target="_blank" rel="noopener">Visit website →</a>
+          </div>
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <h3 class="tier-label mono">Silver Sponsors</h3>
+        <div class="sponsor-row">
+          <div class="sponsor-card">
+            <div class="sponsor-logo">DL</div>
+            <h4>DataLink Telecom</h4>
+            <p>5G network infrastructure and RF testing equipment.</p>
+          </div>
+          <div class="sponsor-card">
+            <div class="sponsor-logo">SR</div>
+            <h4>SignalRise</h4>
+            <p>Antenna design and wireless communication modules.</p>
+          </div>
+          <div class="sponsor-card">
+            <div class="sponsor-logo">EM</div>
+            <h4>EmbedMaster</h4>
+            <p>RTOS and firmware development tools for IoT edge devices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sponsor-cta">
+      <p>Want your brand in front of 200+ engineering students?</p>
+      <a href="https://www.instagram.com/etsa.gcoen/" class="btn btn-primary">Become a Sponsor</a>
+      <a href="index.html#sponsors" class="btn btn-ghost">View ETSA Partners</a>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Ready to join the next event?</h2>
+      <p>Pick your event and register in under two minutes.</p>
+      <a href="register.html" class="btn btn-primary btn-big">Register Now ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ETSA</div>
+      <p>The Electronics and Telecommunications Student Association promotes academic excellence through engaging activities that foster professional development and networking opportunities among students.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/etsa.gcoen/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8a4.48 4.48 0 0 0-7.86 3.14A12.94 12.94 0 0 1 3 4s-4 9 5 13a13.64 13.64 0 0 1-8 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/etsa-gcoen-025bbb23a/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="horizon.html">Horizon</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Terms</h4>
+      <ul>
+        <li><a href="#">TOS</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support &amp; Help</h4>
+      <ul>
+        <li><a href="tel:7774973903">xxxxxxxxxx - Ayan Pathan</a></li>
+        <li><a href="tel:9921707207">xxxxxxxxxx - Jagesh Rana</a></li>
+        <li><a href="mailto:etsa.gcoen@gmail.com">etsa.gcoen@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <div class="footer-note">© 2026 ETSA — Electronics &amp; Telecommunication Students' Association</div>
+  </div>
+</footer>
+
+
+<script>
+  //  how many hours the hackathon runs
+  var HACKATHON_DURATION_HOURS = 8 ;
+
+  // HOW THIS WORKS:
+  // - If the page URL has ?start=169999999999 in it, the timer reads
+  //   that exact moment as the real start time (this is what happens
+  //   for participants who open the link the organizer shares).
+  // - If there's NO ?start= in the URL, a "Start Hackathon Now" button
+  //   is shown. The organizer clicks it the moment the event begins.
+  //   This creates a special link (with ?start= added) that they then
+  //   copy and share with everyone so all timers match exactly.
+ 
+
+  var HACKATHON_START = null;
+  var HACKATHON_END = null;
+  var timerIntervalHandle = null;
+
+  function pad(n){ return String(n).padStart(2, '0'); }
+
+  function beginTimerFrom(startTimestamp){
+    HACKATHON_START = new Date(startTimestamp);
+    HACKATHON_END = new Date(HACKATHON_START.getTime() + HACKATHON_DURATION_HOURS * 60 * 60 * 1000);
+    updateHackathonTimer();
+    if(timerIntervalHandle) clearInterval(timerIntervalHandle);
+    timerIntervalHandle = setInterval(updateHackathonTimer, 1000);
+  }
+
+  function updateHackathonTimer(){
+    var now = new Date();
+    var statusBadge = document.getElementById('timer-status-badge');
+    var contextLabel = document.getElementById('timer-context-label');
+    var progressWrap = document.getElementById('timer-progress-wrap');
+    var progressFill = document.getElementById('timer-progress-fill');
+    var progressPct = document.getElementById('timer-progress-pct');
+    var display = document.getElementById('timer-display');
+    if(!statusBadge || !HACKATHON_START) return;
+
+    var remaining;
+
+    if(now < HACKATHON_START){
+      statusBadge.textContent = 'STARTS SOON';
+      contextLabel.textContent = 'Time until the hackathon begins';
+      progressWrap.style.display = 'none';
+      remaining = HACKATHON_START - now;
+    } else if(now >= HACKATHON_START && now < HACKATHON_END){
+      statusBadge.textContent = 'LIVE NOW';
+      contextLabel.textContent = 'Time remaining in the hackathon';
+      progressWrap.style.display = 'block';
+      remaining = HACKATHON_END - now;
+
+      var totalDuration = HACKATHON_END - HACKATHON_START;
+      var elapsed = now - HACKATHON_START;
+      var pct = Math.min(100, Math.max(0, (elapsed / totalDuration) * 100));
+      progressFill.style.width = pct.toFixed(1) + '%';
+      progressPct.textContent = Math.round(pct) + '% complete';
+    } else {
+      statusBadge.textContent = 'ENDED';
+      display.innerHTML = '<div class="timer-ended">Hackathon has ended — thanks for participating!</div>';
+      contextLabel.textContent = 'See you at the next one';
+      progressWrap.style.display = 'block';
+      progressFill.style.width = '100%';
+      progressPct.textContent = '100% complete';
+      clearInterval(timerIntervalHandle);
+      return;
+    }
+
+    var totalSeconds = Math.floor(remaining / 1000);
+    var hh = Math.floor(totalSeconds / 3600);
+    var mm = Math.floor((totalSeconds % 3600) / 60);
+    var ss = totalSeconds % 60;
+
+    var hhEl = document.getElementById('tm-hh');
+    var mmEl = document.getElementById('tm-mm');
+    var ssEl = document.getElementById('tm-ss');
+    if(hhEl){ hhEl.textContent = pad(hh); }
+    if(mmEl){ mmEl.textContent = pad(mm); }
+    if(ssEl){ ssEl.textContent = pad(ss); }
+  }
+
+  // ---- Check the URL for an existing start time ----
+  var urlParams = new URLSearchParams(window.location.search);
+  var startParam = urlParams.get('start');
+
+  if(startParam){
+    // This visitor opened a link that already has the start time in it
+    document.getElementById('organizer-controls').style.display = 'none';
+    beginTimerFrom(parseInt(startParam, 10));
+  } else {
+    // No start time yet — show the organizer's "Start" button
+    document.getElementById('start-hackathon-btn').addEventListener('click', function(){
+      var nowTimestamp = Date.now();
+
+      // Build a shareable link with ?start= added
+      var shareUrl = window.location.origin + window.location.pathname + '?start=' + nowTimestamp;
+
+      // Update this browser's own address bar too (optional, doesn't reload the page)
+      window.history.replaceState({}, '', shareUrl);
+
+      // Show link to the organizer can copy it
+      document.getElementById('start-hackathon-btn').style.display = 'none';
+      document.getElementById('share-url-box').style.display = 'block';
+      document.getElementById('share-url-input').value = shareUrl;
+
+      beginTimerFrom(nowTimestamp);
+    });
+
+    document.getElementById('copy-url-btn').addEventListener('click', function(){
+      var input = document.getElementById('share-url-input');
+      input.select();
+      navigator.clipboard.writeText(input.value).then(function(){
+        var btn = document.getElementById('copy-url-btn');
+        var original = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        setTimeout(function(){ btn.textContent = original; }, 1500);
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
