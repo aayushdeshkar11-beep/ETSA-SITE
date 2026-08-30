@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — ETSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg class="traces" viewBox="0 0 1080 1400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 120 H260 V240 H620 V90 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <path d="M0 480 H180 V620 H540 V520 H900 V700 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <path d="M0 900 H320 V1020 H700 V880 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <circle cx="260" cy="120" r="3.5" fill="#2a9d6e"/>
+  <circle cx="620" cy="240" r="3.5" fill="#2a9d6e"/>
+  <circle cx="180" cy="480" r="3.5" fill="#2a9d6e"/>
+  <circle cx="540" cy="620" r="3.5" fill="#2a9d6e"/>
+  <circle cx="900" cy="520" r="3.5" fill="#2a9d6e"/>
+  <circle cx="320" cy="900" r="3.5" fill="#2a9d6e"/>
+  <circle cx="700" cy="1020" r="3.5" fill="#2a9d6e"/>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 34 34" fill="none">
+        <rect x="1" y="1" width="32" height="32" rx="8" fill="#0b0e14"/>
+        <path d="M17 9 V14.5 M17 19.5 V25 M9 17 H14.5 M19.5 17 H25" stroke="#A855F7" stroke-width="1.8"/>
+        <circle cx="17" cy="17" r="3.2" fill="#A855F7"/>
+      </svg>
+      <span>ETSA</span>
+    </div>
+    <input type="checkbox" id="nav-check" class="nav-check">
+    <label for="nav-check" class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="horizon.html">Horizon</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html" class="nav-cta">Register</a>
+    </div>
+    <label for="nav-check" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="section-tag mono">HORIZON</span>
+    <h1 class="page-title">Pick an event to register</h1>
+    <p class="sub">Choose which event you want to register for. You'll be redirected to that event's registration form.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="register-panel">
+      <div class="field">
+        <label for="event-select">Select event</label>
+        <!--
+          EDIT: change the value="" URLs below to your real Google Form links.
+             as a placeholder — replace before going live.
+        -->
+        <select id="event-select" onchange="document.getElementById('go-btn').disabled = !this.value;">
+          <option value="" selected disabled>— Choose an event —</option>
+          <option value="https://forms.gle/tTQYHAdrcDKz3RvS9">Horizon (comming soon)</option>
+          <option value="https://forms.gle/tTQYHAdrcDKz3RvS9">IoT (comming soon)</option>
+        </select>
+        <div class="field-hint">Selecting an event enables the button below.</div>
+      </div>
+      <button id="go-btn" class="btn btn-primary" disabled onclick="
+        var url = document.getElementById('event-select').value;
+        if(url){ window.open(url, '_blank', 'noopener'); }
+      ">Continue to Registration Form ↗</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ETSA</div>
+      <p>The Electronics and Telecommunications Student Association promotes academic excellence through engaging activities that foster professional development and networking opportunities among students.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/etsa.gcoen/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8a4.48 4.48 0 0 0-7.86 3.14A12.94 12.94 0 0 1 3 4s-4 9 5 13a13.64 13.64 0 0 1-8 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/etsa-gcoen-025bbb23a/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="horizon.html">Horizon</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Terms</h4>
+      <ul>
+        <li><a href="#">TOS</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support &amp; Help</h4>
+      <ul>
+        <li><a href="tel:7774973903">xxxxxxxxxx - Ayan Pathan</a></li>
+        <li><a href="tel:9921707207">xxxxxxxxxx - Jagesh Rana</a></li>
+        <li><a href="mailto:etsa.gcoen@gmail.com">etsa.gcoen@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <div class="footer-note">© 2026 ETSA — Electronics &amp; Telecommunication Students' Association</div>
+  </div>
+</footer>
+
+</body>
+</html>

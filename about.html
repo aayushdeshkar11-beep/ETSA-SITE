@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — ETSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .team-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .team-card{text-align:center;}
+  .team-avatar{
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    margin:0 auto 14px;
+    background:var(--signal-tint); color:var(--signal-deep); display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.5rem;
+  }
+  .team-card h3{font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:600;}
+  .team-card p{color:var(--ink-dim); font-size:0.85rem; margin-top:2px;}
+  @media (max-width:820px){.team-grid{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<svg class="traces" viewBox="0 0 1080 1400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 120 H260 V240 H620 V90 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <path d="M0 480 H180 V620 H540 V520 H900 V700 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <path d="M0 900 H320 V1020 H700 V880 H1080" stroke="#1c2532" stroke-width="1.5" fill="none"/>
+  <circle cx="260" cy="120" r="3.5" fill="#2a9d6e"/>
+  <circle cx="620" cy="240" r="3.5" fill="#2a9d6e"/>
+  <circle cx="180" cy="480" r="3.5" fill="#2a9d6e"/>
+  <circle cx="540" cy="620" r="3.5" fill="#2a9d6e"/>
+  <circle cx="900" cy="520" r="3.5" fill="#2a9d6e"/>
+  <circle cx="320" cy="900" r="3.5" fill="#2a9d6e"/>
+  <circle cx="700" cy="1020" r="3.5" fill="#2a9d6e"/>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 34 34" fill="none">
+        <rect x="1" y="1" width="32" height="32" rx="8" fill="#0b0e14"/>
+        <path d="M17 9 V14.5 M17 19.5 V25 M9 17 H14.5 M19.5 17 H25" stroke="#A855F7" stroke-width="1.8"/>
+        <circle cx="17" cy="17" r="3.2" fill="#A855F7"/>
+      </svg>
+      <span>ETSA</span>
+    </div>
+    <input type="checkbox" id="nav-check" class="nav-check">
+    <label for="nav-check" class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="horizon.html">Horizon</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html" class="nav-cta">Register</a>
+    </div>
+    <label for="nav-check" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="section-tag mono">ABOUT US</span>
+    <h1 class="page-title">Built by students, for students</h1>
+    <p class="sub">ETSA is the student body of Electronics and Telecommunication Engineering at Government College of Engineering, Nagpur. It organizes academic and extracurricular activities, promotes students’ personal and professional growth, and fosters leadership and community engagement. ETSA also conducts Horizon, its annual technical extravaganza.
+    <!-- EDIT: replace with your real intro --></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag mono">OUR MISSION</span>
+      <h2 class="section-title">What we're here to do</h2>
+      <p class="lead">
+        ETSA brings together students of Electronics &amp; Telecommunication Engineering to explore beyond the classroom — through technical talks, competitions, workshops, and industry interactions. We exist to make learning collaborative and give every student a platform to build, present, and grow.
+        <!-- EDIT: replace with your department's real mission statement -->
+      </p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Since 2023</h3>
+        <p>Running consistently for 3 years, ETSA has grown from a small student circle to a full department community.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Student-run</h3>
+        <p>Every event, from planning to execution, is organised by ETC students with faculty as guiding mentors.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
+        <h3>Open to all years</h3>
+        <p>First year through final year — every ETC student is part of the ETSA community, no invite needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+
+    <div class="section-head center">
+      <span class="section-tag mono">FACULTY</span>
+      <h2 class="section-title">Department Leadership</h2>
+      <p class="lead">
+        Guiding ETSA with academic leadership, mentorship and continuous support.
+      </p>
+    </div>
+
+    <div class="faculty-grid">
+
+      <!-- HOD -->
+
+      <div class="faculty-card">
+
+        <img
+          src="RAUT_MAM.png"
+          alt="Head of Department"
+          class="faculty-photo"
+        >
+
+        <h3>Dr. [HOD Name]</h3>
+
+        <p class="faculty-role">
+          Head of Department
+        </p>
+
+        <p class="faculty-info">
+          Electronics & Telecommunication Engineering<br>
+          Government College of Engineering, Nagpur
+        </p>
+
+      </div>
+
+
+      <!-- BRANCH COORDINATOR -->
+
+      <div class="faculty-card">
+
+        <img
+          src="RAUT MAM.png"
+          alt="Branch Coordinator"
+          class="faculty-photo"
+        >
+
+        <h3>Prof. [Coordinator Name]</h3>
+
+        <p class="faculty-role">
+          Branch Coordinator
+        </p>
+
+        <p class="faculty-info">
+          Electronics & Telecommunication Engineering<br>
+          Government College of Engineering, Nagpur
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="section-tag mono">COORDINATORS</span>
+      <h2 class="section-title">The Team Behind ETSA</h2>
+      <p class="lead">A small student committee, supported by department faculty.</p>
+    </div>
+    <div class="team-grid">
+      <!-- EDIT: STUDENTS NAME IN ETSA TEAM  -->
+      <div class="team-card">
+        <div class="team-avatar">AP</div>
+        <h3>Ayan Pathan</h3>
+        <p>President</p>
+      </div>
+      <div class="team-card">
+        <img src="Jagesh.png" alt="JR" class="team-avatar">
+        <h3>Jagesh Rana</h3>
+        <p>Vice President</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">YV</div>
+        <h3>Yashaswi Vasamsetti</h3>
+        <p>Seceretry</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">VR</div>
+        <h3>Vivek Rathod</h3>
+        <p>Advisory</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">KM</div>
+        <h3>Kartik Musale</h3>
+        <p>Advisory</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">AB</div>
+        <h3>Aman Bakhade</h3>
+        <p>Joint Secretary</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">PK</div>
+        <h3>Padhmashree Khobragade</h3>
+        <p>Joint Secretary</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">NN</div>
+        <h3>Niharika Nagpurkar</h3>
+        <p>Chief Treasure</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SS</div>
+        <h3>Saksham Shukla</h3>
+        <p>Treasure</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SD</div>
+        <h3>Shrikant Dhobale</h3>
+        <p>Sports Coordinator</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SD</div>
+        <h3>Shreyansh Mule</h3>
+        <p>Sports Co-head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SD</div>
+        <h3>Shravani Thekedar</h3>
+        <p>Sports Co-head</p>
+      </div>
+      <div class="team-card">
+      <img src="Ayush Deshkar.jpg" alt="AD" class="team-avatar">
+        <h3>Ayush Deshkar</h3>
+        <p>Web & UI Development head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">PD</div>
+        <h3>Prasad Deotale</h3>
+        <p>Technical head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">YA</div>
+        <h3>Yash Ainapure</h3>
+        <p>Technical head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">LD</div>
+        <h3>Lokesh Dobale</h3>
+        <p>Technical Co-head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SB</div>
+        <h3>Siya Bendale</h3>
+        <p>Technical Co-head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">AI</div>
+        <h3>Arnav Ingole</h3>
+        <p>Event Managenment Head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">KZ</div>
+        <h3>Khushi Zade</h3>
+        <p>Event Managenment Head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">AB</div>
+        <h3>Aastha Belkhude</h3>
+        <p>Event Managenment Head</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">RB</div>
+        <h3>Rujuta Brahme</h3>
+        <p>Ladies Representative</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">JN</div>
+        <h3>Jagruti Nandgaye</h3>
+        <p>Chief Executive Member</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">MW</div>
+        <h3>Maitrey Waindeshkar</h3>
+        <p>Chief Executive Member</p>
+      </div>
+<div class="team-card">
+  <div class="team-avatar">AR</div>
+  <h3>Aditya Raut</h3>
+  <p>Executive Member</p>
+</div>
+
+<div class="team-card">
+  <div class="team-avatar">AC</div>
+  <h3>Ayush Chafle</h3>
+  <p>Executive Member</p>
+</div>
+
+<div class="team-card">
+  <div class="team-avatar">TZ</div>
+  <h3>Tejas Zade</h3>
+  <p>Executive Member</p>
+</div>
+
+<div class="team-card">
+  <div class="team-avatar">YS</div>
+  <h3>Yusuf Saudagar</h3>
+  <p>Executive Member</p>
+</div>
+
+<div class="team-card">
+  <div class="team-avatar">SK</div>
+  <h3>Sahil Khate</h3>
+  <p>Executive Member</p>
+</div>
+
+<div class="team-card">
+  <div class="team-avatar">ZKP</div>
+  <h3>Zahir Khan Pathan</h3>
+  <p>Executive Member</p>
+</div>
+
+<div class="team-card">
+  <div class="team-avatar">HD</div>
+  <h3>Harshal Dhurve</h3>
+  <p>Executive Member</p>
+</div>
+      
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo-text">ETSA</div>
+      <p>The Electronics and Telecommunications Student Association promotes academic excellence through engaging activities that foster professional development and networking opportunities among students.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/etsa.gcoen/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8a4.48 4.48 0 0 0-7.86 3.14A12.94 12.94 0 0 1 3 4s-4 9 5 13a13.64 13.64 0 0 1-8 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/etsa-gcoen-025bbb23a/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="horizon.html">Horizon</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Terms</h4>
+      <ul>
+        <li><a href="#">TOS</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support &amp; Help</h4>
+      <ul>
+        <li><a href="tel:7774973903">7774973903 - Bhavesh Rahate</a></li>
+        <li><a href="tel:9921707207">9921707207 - Vedant Gotmare</a></li>
+        <li><a href="mailto:etsa.gcoen@gmail.com">etsa.gcoen@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <div class="footer-note">© 2026 ETSA — Electronics &amp; Telecommunication Students' Association</div>
+  </div>
+
+
+</body>
+</html>
